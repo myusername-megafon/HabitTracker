@@ -19,9 +19,11 @@ import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.example.habitstracker.R
 import com.example.habitstracker.data.model.Habit
 import com.example.habitstracker.presentation.utils.HabitIcons
 
@@ -52,7 +54,7 @@ fun HabitItem(
                 contentAlignment = Center
             ) {
                 Icon(
-                    imageVector = HabitIcons.getIcon(habit.iconIndex),
+                    painter = painterResource(HabitIcons.getIconResId(habit.iconIndex)),
                     contentDescription = habit.name,
                     tint = Color.White,
                     modifier = Modifier.size(24.dp)
